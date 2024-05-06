@@ -7,7 +7,7 @@ import { useState } from "react";
 const Header = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false)
     return (
-        <div className=" bg-gray-100 px-4 py-5 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8">
+        <div className=" bg-gray-100 px-4 py-5 mx-auto sm:max-w-lg md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8">
             <div className="flex justify-between items-center">
                 {/* Logo section */}
                 <Link to='/' className="flex items-center">
@@ -21,12 +21,11 @@ const Header = () => {
                     {/* Menu bar */}
                     <button onClick={() => setIsMenuOpen(!isMenuOpen)} className="md:hidden">
                         <span >
-                            {isMenuOpen === false ? <RiMenu3Line className="h-6 w-6"/> : <MdClose  className="h-6 w-6"/>
-}
+                            {isMenuOpen === true ? <MdClose  className="h-6 w-6"/> : <RiMenu3Line className="h-6 w-6"/>}
                         </span>
                     </button>
 
-                    <nav className={`md:flex sm:flex-col absolute ${isMenuOpen ? 'right-0' : '-right-full'}`}>
+                    <nav className={`flex flex-col md:flex-row duration-1000 absolute  z-50 md:static  w-full bg-gray-300 md:bg-gray-100 text-center mt-[20px] ${isMenuOpen ? 'left-0' : '-left-full'}`}>
                         <NavLink to='/' className={({ isActive }) => (isActive ? 'active' : 'defoult')}>Home</NavLink>
                         <NavLink to='/books' className={({ isActive }) => (isActive ? 'active' : 'defoult')}>Books</NavLink>
                         <NavLink to='/about' className={({ isActive }) => (isActive ? 'active' : 'defoult')}>About Us</NavLink>
