@@ -25,7 +25,7 @@ const Header = () => {
                         </span>
                     </button>
 
-                    <nav className={`flex flex-col md:flex-row duration-1000 absolute  z-50 md:static  w-full bg-gray-300 md:bg-gray-100 text-center mt-[20px] ${isMenuOpen ? 'left-0' : '-left-full'}`}>
+                    <nav className={`flex flex-col md:flex-row duration-500 absolute  z-50 md:static  w-full bg-gray-300 md:bg-gray-100 text-center mt-[20px] ${isMenuOpen ? 'left-0' : '-left-full'}`}>
                         <NavLink to='/' className={({ isActive }) => (isActive ? 'active' : 'defoult')}>Home</NavLink>
                         <NavLink to='/books' className={({ isActive }) => (isActive ? 'active' : 'defoult')}>Books</NavLink>
                         <NavLink to='/about' className={({ isActive }) => (isActive ? 'active' : 'defoult')}>About Us</NavLink>
