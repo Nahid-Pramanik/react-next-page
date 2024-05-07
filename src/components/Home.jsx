@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { MdOutlineShoppingCart } from "react-icons/md";
 import Lottie from "lottie-react";
-import reader from '../assets//reader.json'
+import reader from '../assets/reader.json'
 
 
 

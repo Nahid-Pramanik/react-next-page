@@ -1,9 +1,14 @@
+import { useLoaderData } from "react-router-dom";
+import Book from "./Book";
 
 
 const Books = () => {
+    const {books} = useLoaderData();
     return (
         <div>
-            <h3>Book page</h3>
+            {
+                books.map(book => <Book key={book.isbn13} book={book}></Book>)
+            }
         </div>
     );
 };
